@@ -30,6 +30,32 @@ describe('sayHello', function() {
     it('should return the string "Hello, Pat!" when passed Pat', function() {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World!" when passed undefined value', function() {
+        expect(sayHello(undefined)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when passed the boolean value of true', function() {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when passed a null value', function() {
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when passed a number', function() {
+        expect(sayHello(3)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when passed the boolean value of false', function() {
+        expect(sayHello(false)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when passed NaN', function() {
+        expect(sayHello(NaN)).toBe("Hello, World!");
+    });
 });
+
+
+
+// expect(sayHello(false)).toBe("Hello, World!")
+
+// expect(sayHello(true)).toBe("Hello, World!")
+
+// expect(sayHello()).toBe("Hello, World!")
 
 // expect(typeof sayHello()).toBe("string")
