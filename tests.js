@@ -48,8 +48,45 @@ describe('sayHello', function() {
     it('should return the string "Hello, World!" when passed NaN', function() {
         expect(sayHello(NaN)).toBe("Hello, World!");
     });
+    it('should return the string "Hello, World!" when passed an empty string ""', function() {
+        expect(sayHello("")).toBe("Hello, World!");
+    });
 });
 
+describe('isFive', function() {
+    it('should be a defined function', function () {
+        expect(typeof isFive).toBe('function');
+    });
+    it('should return true is the parameter is the number 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should return false is the parameter is not the number 5', function () {
+        expect(isFive(1)).toBe(false);
+    });
+    it('should return false is the parameter is a string', function () {
+        expect(isFive("")).toBe(false);
+    });
+
+});
+
+describe('isEven', function() {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return true is the parameter is an even number', function () {
+        expect(isFive(8)).toBe(true);
+    });
+    it('should return false is the parameter is not an even number', function () {
+        expect(isFive(9)).toBe(false);
+    });
+    it('should return true is the parameter is a string that evaluates to an even number', function () {
+        expect(isFive("2")).toBe(true);
+    });
+    it('should return false is the parameter is a string that evaluates to an odd number', function () {
+        expect(isFive("3")).toBe(false);
+    });
+
+});
 
 
 // expect(sayHello(false)).toBe("Hello, World!")

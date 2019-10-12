@@ -4,7 +4,8 @@ function helloWorld() {
 }
 
 function sayHello(input) {
-    if (typeof input !== "string") {
+    // var input = parseFloat(input);
+    if ((typeof input !== "string") || (input.length === 0)) {
         return "Hello, World!"
     } else return ("Hello, " + input + "!");
 }
@@ -15,3 +16,16 @@ function sayHello(input) {
 //     return "Hello, Pat!"
 // } else
 //     return "Hello, Jane!";
+
+function isFive(num) {
+    if (num === 5) {
+        return true
+    } else return false
+}
+
+function isEven(num) {
+    var num = parseFloat(num);
+    if (num % 2 === 0) {
+        return true
+    } else return false
+}
