@@ -51,6 +51,9 @@ describe('sayHello', function() {
     it('should return the string "Hello, World!" when passed an empty string ""', function() {
         expect(sayHello("")).toBe("Hello, World!");
     });
+    it('should return "Hello, World!" if passed a numeric string', function() {
+        expect(sayHello("2")).toBe("Hello, World!");
+    });
 });
 
 //figure out how to test for numeric string^^
@@ -111,3 +114,18 @@ describe('isVowel', function() {
 // expect(sayHello()).toBe("Hello, World!")
 
 // expect(typeof sayHello()).toBe("string")
+
+describe('add', function() {
+    it('should be a defined function', function() {
+        expect(typeof add).toBe('function');
+    });
+    it('it should add two numbers together when passed two "numbers"', function () {
+        expect(add(2,4)).toBe(6);
+    });
+    it('it should add two numbers together when passed numeric strings', function() {
+        expect(add("4","8")).toBe(12);
+    });
+    it('should return false if passed a anything other than a number or numeric string', function() {
+        expect(add("","")).toBe(false);
+    });
+});
