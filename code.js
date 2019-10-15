@@ -29,3 +29,9 @@ function isEven(num) {
         return true
     } else return false
 }
+
+function isVowel(input){
+    if ((input === "A") || (input === "E") || (input === "I") || (input === "O") || (input === "U") || (input === "a") || (input === "e") || (input === "i") || (input === "o") || (input === "u")) {
+        return true;
+    } else return false
+}

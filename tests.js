@@ -53,6 +53,8 @@ describe('sayHello', function() {
     });
 });
 
+//figure out how to test for numeric string^^
+
 describe('isFive', function() {
     it('should be a defined function', function () {
         expect(typeof isFive).toBe('function');
@@ -66,6 +68,9 @@ describe('isFive', function() {
     it('should return false is the parameter is a string', function () {
         expect(isFive("")).toBe(false);
     });
+    it('should return a boolean value regardless of the input', function () {
+        expect(isFive()).toEqual(jasmine.any(Boolean));
+    });
 
 });
 
@@ -74,20 +79,30 @@ describe('isEven', function() {
         expect(typeof isEven).toBe('function');
     });
     it('should return true is the parameter is an even number', function () {
-        expect(isFive(8)).toBe(true);
+        expect(isEven(8)).toBe(true);
     });
     it('should return false is the parameter is not an even number', function () {
-        expect(isFive(9)).toBe(false);
+        expect(isEven(9)).toBe(false);
     });
     it('should return true is the parameter is a string that evaluates to an even number', function () {
-        expect(isFive("2")).toBe(true);
+        expect(isEven("2")).toBe(true);
     });
     it('should return false is the parameter is a string that evaluates to an odd number', function () {
-        expect(isFive("3")).toBe(false);
+        expect(isEven("3")).toBe(false);
     });
 
 });
-
+describe('isVowel', function() {
+    it('should be a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean value regardless of the input', function () {
+        expect(isVowel()).toEqual(jasmine.any(Boolean));
+    });
+    it('should return true if passed a vowel (AEIOU/aeiou)', function() {
+        expect(isVowel("a")).toBe(true);
+    });
+});
 
 // expect(sayHello(false)).toBe("Hello, World!")
 
